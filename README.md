@@ -17,4 +17,4 @@ This project includes two main tasks:
 
 ## Submission Links
 - GitHub Repository: https://github.com/Sgomes3/IS-202-Group-6-Project.git
-- Project Board : https://users/achandu4/projects/2/views/1
+- Project Board : github.com/users/achandu4/projects/2/views/1
