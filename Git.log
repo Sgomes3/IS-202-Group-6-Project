@@ -1,0 +1,146 @@
+2026-09-20 19:47:02.473 [info] [main] Log level: Info
+2026-09-20 19:47:02.474 [info] [main] Validating found git in: "C:\Program Files\Git\cmd\git.exe"
+2026-09-20 19:47:02.474 [info] [main] Using git "2.55.0.windows.5" from "C:\Program Files\Git\cmd\git.exe"
+2026-09-20 19:47:02.474 [info] [Model][doInitialScan] Initial repository scan started
+2026-09-20 19:47:02.563 [info] > git rev-parse --show-toplevel [178ms]
+2026-09-20 19:47:03.294 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [720ms]
+2026-09-20 19:47:03.372 [info] [Model][openRepository] Opened repository (path): c:\Users\shrut\GitHub Project\IS-202-Group-6-Project
+2026-09-20 19:47:03.372 [info] [Model][openRepository] Opened repository (real path): c:\Users\shrut\GitHub Project\IS-202-Group-6-Project
+2026-09-20 19:47:03.373 [info] [Model][openRepository] Opened repository (kind): repository
+2026-09-20 19:47:03.389 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2026-09-20 19:47:03.582 [info] > git config --get commit.template [180ms]
+2026-09-20 19:47:03.582 [info] > git config --get --local core.virtualfilesystem [197ms]
+2026-09-20 19:47:03.582 [warning] [Git][config] git config failed: Failed to execute git
+2026-09-20 19:47:03.610 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [162ms]
+2026-09-20 19:47:03.610 [warning] [Git][getBranch] No such branch: main
+2026-09-20 19:47:03.764 [info] > git status -z -uall [143ms]
+2026-09-20 19:47:03.765 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [136ms]
+2026-09-20 19:47:04.160 [info] > git config --get commit.template [232ms]
+2026-09-20 19:47:04.160 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [370ms]
+2026-09-20 19:47:04.160 [warning] [Git][getBranch] No such branch: main
+2026-09-20 19:47:04.161 [error] [GitHistoryProvider][resolveHEADMergeBase] Failed to resolve merge base for main: Error: No such branch: main.
+2026-09-20 19:47:04.472 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [104ms]
+2026-09-20 19:47:04.472 [warning] [Git][getBranch] No such branch: main
+2026-09-20 19:47:04.658 [info] > git status -z -uall [182ms]
+2026-09-20 19:47:04.659 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [179ms]
+2026-09-20 19:47:04.757 [info] > git config --get commit.template [73ms]
+2026-09-20 19:47:04.765 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [75ms]
+2026-09-20 19:47:04.765 [warning] [Git][getBranch] No such branch: main
+2026-09-20 19:47:04.853 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [79ms]
+2026-09-20 19:47:04.862 [info] > git status -z -uall [93ms]
+2026-09-20 19:47:06.375 [info] > git -c i18n.logOutputEncoding=UTF-8 log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [115ms]
+2026-09-20 19:47:06.375 [info] fatal: bad revision 'refs/heads/main'
+2026-09-20 19:47:06.377 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "-c",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2026-09-20 19:47:06.979 [info] > git check-ignore -v -z --stdin [75ms]
+2026-09-20 19:47:11.153 [info] > git show --textconv HEAD:GROUP6 [117ms]
+2026-09-20 19:47:11.163 [info] > git ls-tree -l HEAD -- GROUP6 [105ms]
+2026-09-20 19:47:11.163 [info] fatal: Not a valid object name HEAD
+2026-09-20 19:47:11.235 [info] > git hash-object -t tree /dev/null [74ms]
+2026-09-20 19:47:11.235 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/GROUP6?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CGROUP6%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-09-20 19:47:11.239 [info] > git hash-object -t tree /dev/null [70ms]
+2026-09-20 19:47:11.239 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/GROUP6?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CGROUP6%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-09-20 19:47:11.639 [info] > git check-ignore -v -z --stdin [61ms]
+2026-09-20 19:47:14.309 [info] > git show --textconv HEAD:GROUP6 [83ms]
+2026-09-20 19:47:14.310 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/GROUP6?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CGROUP6%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-09-20 19:47:14.315 [info] > git ls-tree -l HEAD -- GROUP6 [83ms]
+2026-09-20 19:47:14.315 [info] fatal: Not a valid object name HEAD
+2026-09-20 19:47:14.316 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/GROUP6?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CGROUP6%22%2C%22ref%22%3A%22HEAD%22%7D
+2026-09-20 19:47:18.897 [info] > git show --textconv :GROUP6 [93ms]
+2026-09-20 19:47:18.903 [info] > git ls-files --stage -- GROUP6 [91ms]
+2026-09-20 19:47:18.962 [info] > git cat-file -s e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 [53ms]
+2026-09-20 19:47:19.457 [info] > git check-ignore -v -z --stdin [81ms]
+2026-09-20 19:55:31.647 [info] > git ls-files --stage -- GROUP6 [198ms]
+2026-09-20 19:55:31.709 [info] > git cat-file -s e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 [58ms]
+2026-09-20 19:55:48.798 [info] > git -c i18n.logOutputEncoding=UTF-8 log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [100ms]
+2026-09-20 19:55:48.798 [info] fatal: bad revision 'refs/heads/main'
+2026-09-20 19:55:48.799 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "-c",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2026-09-20 19:57:01.926 [info] > git ls-files --stage -- GROUP6 [316ms]
+2026-09-20 19:57:01.989 [info] > git cat-file -s e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 [56ms]
+2026-09-20 19:57:40.169 [info] > git ls-files --stage -- GROUP6 [297ms]
+2026-09-20 19:57:40.233 [info] > git cat-file -s e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 [61ms]
+2026-09-20 20:00:27.316 [info] > git check-ignore -v -z --stdin [676ms]
+2026-09-20 20:00:27.318 [info] > git check-ignore -v -z --stdin [966ms]
+2026-09-20 20:00:27.372 [info] > git config --get commit.template [105ms]
+2026-09-20 20:00:27.451 [info] > git show --textconv :README.md [119ms]
+2026-09-20 20:00:27.452 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/README.md.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CREADME.md%22%2C%22ref%22%3A%22%22%7D
+2026-09-20 20:00:27.454 [info] > git ls-files --stage -- README.md [113ms]
+2026-09-20 20:00:27.455 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/README.md.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CREADME.md%22%2C%22ref%22%3A%22%22%7D
+2026-09-20 20:00:27.466 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [115ms]
+2026-09-20 20:00:27.466 [warning] [Git][getBranch] No such branch: main
+2026-09-20 20:00:27.580 [info] > git status -z -uall [105ms]
+2026-09-20 20:00:27.586 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [98ms]
+2026-09-20 20:01:36.788 [info] > git config --get commit.template [78ms]
+2026-09-20 20:01:36.794 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [71ms]
+2026-09-20 20:01:36.795 [warning] [Git][getBranch] No such branch: main
+2026-09-20 20:01:36.861 [info] > git status -z -uall [62ms]
+2026-09-20 20:01:36.865 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [61ms]
+2026-09-20 20:03:08.729 [info] > git config --get commit.template [67ms]
+2026-09-20 20:03:08.732 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [66ms]
+2026-09-20 20:03:08.732 [warning] [Git][getBranch] No such branch: main
+2026-09-20 20:03:08.806 [info] > git status -z -uall [70ms]
+2026-09-20 20:03:08.810 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [68ms]
+2026-09-20 20:03:36.085 [info] > git check-ignore -v -z --stdin [80ms]
+2026-09-20 20:03:36.205 [info] > git show --textconv :Shruti [107ms]
+2026-09-20 20:03:36.206 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/Shruti.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CShruti%22%2C%22ref%22%3A%22%22%7D
+2026-09-20 20:03:36.240 [info] > git ls-files --stage -- Shruti [135ms]
+2026-09-20 20:03:36.241 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/Shruti.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CShruti%22%2C%22ref%22%3A%22%22%7D
+2026-09-20 20:03:36.284 [info] > git check-ignore -v -z --stdin [112ms]
+2026-09-20 20:03:38.508 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [189ms]
+2026-09-20 20:03:38.508 [warning] [Git][getBranch] No such branch: main
+2026-09-20 20:03:38.510 [info] > git config --get commit.template [196ms]
+2026-09-20 20:03:38.595 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [74ms]
+2026-09-20 20:03:38.596 [info] > git status -z -uall [80ms]
+2026-09-20 20:04:15.702 [info] > git check-ignore -v -z --stdin [155ms]
+2026-09-20 20:04:15.777 [info] > git check-ignore -v -z --stdin [101ms]
+2026-09-20 20:04:15.802 [info] > git show --textconv :Shruti_Gomes.html [87ms]
+2026-09-20 20:04:15.803 [warning] [GitFileSystemProvider][readFile] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/Shruti_Gomes.html.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CShruti_Gomes.html%22%2C%22ref%22%3A%22%22%7D
+2026-09-20 20:04:15.818 [info] > git ls-files --stage -- Shruti_Gomes.html [93ms]
+2026-09-20 20:04:15.819 [warning] [GitFileSystemProvider][stat] File not found - git:/c%3A/Users/shrut/GitHub%20Project/IS-202-Group-6-Project/Shruti_Gomes.html.git?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5Cshrut%5C%5CGitHub%20Project%5C%5CIS-202-Group-6-Project%5C%5CShruti_Gomes.html%22%2C%22ref%22%3A%22%22%7D
+2026-09-20 20:04:16.599 [info] > git config --get commit.template [77ms]
+2026-09-20 20:04:16.604 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [72ms]
+2026-09-20 20:04:16.604 [warning] [Git][getBranch] No such branch: main
+2026-09-20 20:04:16.678 [info] > git status -z -uall [70ms]
+2026-09-20 20:04:16.683 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [69ms]
+2026-09-20 20:05:51.697 [info] > git config --get commit.template [69ms]
+2026-09-20 20:05:51.702 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [69ms]
+2026-09-20 20:05:51.702 [warning] [Git][getBranch] No such branch: main
+2026-09-20 20:05:51.775 [info] > git status -z -uall [69ms]
+2026-09-20 20:05:51.778 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [67ms]
+2026-09-20 20:06:34.887 [info] > git -c i18n.logOutputEncoding=UTF-8 log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [161ms]
+2026-09-20 20:06:34.887 [info] fatal: bad revision 'refs/heads/main'
+2026-09-20 20:06:34.888 [error] [GitHistoryProvider][provideHistoryItems] Failed to get history items with options '{"historyItemRefs":["refs/heads/main"],"limit":50,"skip":0}': Failed to execute git {
+  "exitCode": 128,
+  "gitCommand": "-c",
+  "stdout": "",
+  "stderr": "fatal: bad revision 'refs/heads/main'\n"
+}
+2026-09-20 20:07:04.060 [info] > git -c user.useConfigOnly=true commit --quiet [95ms]
+2026-09-20 20:07:04.060 [info] Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+2026-09-20 20:07:04.118 [info] > git config --get-all user.name [53ms]
+2026-09-20 20:07:04.201 [info] > git config --get commit.template [75ms]
+2026-09-20 20:07:04.211 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) --ignore-case refs/heads/main refs/remotes/main [77ms]
+2026-09-20 20:07:04.211 [warning] [Git][getBranch] No such branch: main
+2026-09-20 20:07:04.286 [info] > git status -z -uall [71ms]
+2026-09-20 20:07:04.289 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [70ms]
