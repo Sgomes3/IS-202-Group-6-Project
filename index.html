@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in – Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Log in</h1>
+    <p class="note">Demo only. Use made-up details. Try demo@example.com / demo1234.</p>
+    <form id="login-form" novalidate>
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="off" placeholder="demo@example.com">
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="off" placeholder="demo1234">
+      <button type="submit">Log in</button>
+      <p id="message" role="alert" aria-live="polite"></p>
+    </form>
+  </main>
+  <script>
+    const DEMO_EMAIL = "demo@example.com";
+    const DEMO_PASSWORD = "demo1234";
+    const form = document.getElementById("login-form");
+    const msg = document.getElementById("message");
+
+    function show(text, type) {
+      msg.textContent = text;
+      msg.className = type;
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      if (!email || !password) {
+        show("Enter your email and password.", "error");
+      } else if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
+        show("Success! You are logged in (demo).", "success");
+      } else {
+        show("Email or password is incorrect. Try again.", "error");
+      }
+    });
+  </script>
+</body>
+</html>
