@@ -1,158 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in - Demo</title>
-  <style>
-  /* Base Page Layout */
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f3f4f6;
-    display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-     /* Centered Login Card */
-     main.card {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            width: 100%;
-            max-width: 360px;
-            box-sizing: border-box;
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 24px;
-            color: #111827;
-            text-align: center;
-        }
-        /* Demo Notice Subtext */
-        .note {
-            font-size: 13px;
-            color: #6b7280;
-            text-align: center;
-            margin-bottom: 24px;
-            line-height: 1.4;
-        }
- /* Form Inputs & Labels */
-        .form-group {
-            margin-bottom: 18px;
-        }
- label {
-            display: block;
-            margin-bottom: 6px;
-            color: #374151;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        input {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 14px;
-            transition: border-color 0.2s;
-        }
-         input:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-        /* Action Button */
-        button {
-            width: 100%;
-            padding: 11px;
-            background-color: #2563eb;
-            color: #ffffff;
-            border: none;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            margin-top: 6px;
-        }
-        button:hover {
-            background-color: #1d4ed8;
-        }
-         /* Dynamic Feedback Messages */
-        #message {
-            margin-top: 16px;
-            padding: 10px 12px;
-            border-radius: 6px;
-            font-size: 14px;
-            text-align: center;
-            display: none; /* Hidden until triggered */
-            line-height: 1.4;
-        }
-         /* Message State Modifiers */
-        #message.error {
-            display: block;
-            background-color: #fef2f2;
-            color: #991b1b;
-            border: 1px solid #fee2e2;
-        }
-        #message.success {
-            display: block;
-            background-color: #f0fdf4;
-            color: #166534;
-            border: 1px solid #dcfce7;
-        }
-        </style>
-        </head>
-        <main class="card">
-        <h1>Log in</h1>
-         <p class="note">Demo only. Use made-up details.<br>Try <strong>demo@example.com</strong> / <strong>demo1234</strong></p>
-         <form id="login-form" novalidate>
-          <div class="form-group">
-           <label for="email">Email</label>
-           <input id="email" type="email" autocomplete="off" placeholder="demo@example.com">
-           </div>
-           <div class="form-group">
-           <label for="password">Password</label>
-            <input id="password" type="password" autocomplete="off" placeholder="demo1234">
-            </div>
-             <button type="submit">Log in</button>
-              </form>
-           <!-- Status feedback display -->
-          <p id="message" role="alert" aria-live="polite"></p>
-          </main>
-          <script>
-           // Fictional workshop demo details
-           const DEMO_EMAIL = "demo@example.com";
-          const DEMO_PASSWORD = "demo1234";
-         const form = document.getElementById("login-form");
-         const msg = document.getElementById("message");
-         // UI Helper to switch banner layouts 
-        function show(text, type) {
-        msg.textContent = text;
-         msg.className = type; // Applies "error" or "success" class CSS rules
-        }
-        // Intercept form submission
-            form.addEventListener("submit", (e) => {
-             e.preventDefault();
-             const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value;
-         // 1. Check for blank fields
-        if (!email || !password) {
-         show("Enter your email and password.", "error");
-            } 
-         // 2. Validate against hardcoded test strings
-           else if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
-           show("Success! You are logged in (demo).", "success");
-           } 
-           // 3. Trigger fallback wrong state
-           else {
-           show("Email or password is incorrect. Try again.", "error");
-           }
-          });
-          </script>
-  </body> 
-  </html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Database Design & Scripting</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; background: #f4f6f9; color: #333; }
+        .container { max-width: 900px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin: 0 auto; }
+        h1, h2 { color: #1e3a8a; }
+        pre { background: #1e293b; color: #f8fafc; padding: 20px; border-radius: 6px; overflow-x: auto; font-size: 14px; }
+        .meta-info { background: #eff6ff; padding: 15px; border-left: 4px solid #3b82f6; margin-bottom: 20px; border-radius: 4px; }
+    </style>
+</head>
+<body>
 
-                                
+<div class="container">
+    <h1>Task 3: Design ERD & Create Tables with Data</h1>
+    
+    <div class="meta-info">
+        <strong>Group 6 Assignment Submission</strong><br>
+        Due Date: 10/14/2026 11:59 PM<br>
+        Target Product: Deluxe Ball Kit E-Commerce Process (3NF Normalized)
+    </div>
+
+    <h2>1. Relational Table Schemas (DDL)</h2>
+    <p>Run these <code>CREATE TABLE</code> blocks to initialize your database structure with constraints:</p>
+    <pre>
+-- 1. Product Categories
+CREATE TABLE categories (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+-- 2. Products Base Table
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT,
+    name VARCHAR(150) NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    image_url VARCHAR(255),
+    FOREIGN KEY (category_id) REFERENCES categories(category_id) ON DELETE SET NULL
+);
+
+-- 3. Product Options (Sizes, Colors) to maintain 3NF
+CREATE TABLE product_options (
+    option_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    option_type VARCHAR(50), 
+    option_value VARCHAR(50), 
+    stock_quantity INT DEFAULT 0,
+    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE
+);
+
+-- 4. Customer Information
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    phone VARCHAR(20)
+);
+
+-- 5. Product Reviews
+CREATE TABLE reviews (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    customer_id INT,
+    rating INT CHECK (rating BETWEEN 1 AND 5),
+    comment TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
+);
+
+-- 6. Customer Orders 
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    status VARCHAR(50) DEFAULT 'Pending',
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
+);
+
+-- 7. Order Items (Items mapping inside an order context)
+CREATE TABLE order_items (
+    order_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT NOT NULL CHECK (quantity > 0),
+    unit_price DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE RESTRICT
+);
+    </pre>
+
+    <h2>2. Sample Seed Records (DML)</h2>
+    <p>Populates each normalized entity table with 3 mock test rows:</p>
+    <pre>
+-- Populate Categories
+INSERT INTO categories (name) VALUES ('Sports Kits'), ('Outdoor Games'), ('Accessories');
+
+-- Populate Products (Including the Deluxe Ball Kit reference)
+INSERT INTO products (name, description, price, image_url, category_id) VALUES 
+('Deluxe Ball Kit', 'Premium package featuring multi-size custom sports playground balls.', 35.00, 'images/deluxe_kit.png', 1),
+('Hathaway Bocce Set', 'Heavy duty chip-resistant outdoor resin court set.', 91.00, 'images/bocce.png', 2),
+('Official Tetherball Set', 'Heavy metal base pole assembly with standard regulation ball.', 73.00, 'images/tetherball.png', 2);
+
+-- Populate Product Options
+INSERT INTO product_options (product_id, option_type, option_value, stock_quantity) VALUES 
+(1, 'Size', '12 inch', 45),
+(1, 'Color', 'Neon Glow', 20),
+(2, 'Quality', 'Tournament Grade', 15);
+
+-- Populate Customers
+INSERT INTO customers (first_name, last_name, email, phone) VALUES 
+('Abhi', 'Chandu', 'abhi@umbc.edu', '555-0192'),
+('Shruti', 'Gomes', 'shruti@umbc.edu', '555-0143'),
+('Cheta', 'Obi', 'cheta@umbc.edu', '555-0176');
+
+-- Populate Reviews
+INSERT INTO reviews (product_id, customer_id, rating, comment) VALUES 
+(1, 2, 5, 'The 12 inch official ball glows perfectly under blacklight! High quality.'),
+(1, 3, 4, 'Great starter set for yard play, shipping took a couple extra days.'),
+(2, 1, 5, 'Highly durable heavy duty carrying bag. Worth every penny.');
+
+-- Populate Orders
+INSERT INTO orders (customer_id, total_amount, status) VALUES 
+(1, 35.00, 'Shipped'),
+(2, 126.00, 'Processing'),
+(3, 73.00, 'Delivered');
+
+-- Populate Order Items
+INSERT INTO order_items (order_id, product_id, quantity, unit_price) VALUES 
+(1, 1, 1, 35.00),
+(2, 1, 1, 35.00),
+(2, 2, 1, 91.00);
+    </pre>
+</div>
+
+</body>
+</html>
