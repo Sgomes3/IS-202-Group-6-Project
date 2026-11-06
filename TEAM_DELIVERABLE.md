@@ -23,11 +23,10 @@ As a returning user, I want to enter my login details, so that I can reach the a
 
 ## Docker commands
 ```
-cd hello_docker
-docker build -t hello-docker .
-docker run -d -p 8080:80 --name login-prototype hello-docker
+docker build -t is-202-group-6-project .
+docker run --rm -p 8080:80 --name login-prototype is-202-group-6-project
 # open http://localhost:8080
-docker stop login-prototype && docker rm login-prototype
+# stop the container with Ctrl+C
 ```
 
 ## Submission checklist
