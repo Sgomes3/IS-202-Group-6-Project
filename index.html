@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IS202 Project | Deploying to Cloud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-shell">
+  <header class="topbar">
+    <div class="brand-wrap">
+      <span class="brand-mark">IS</span>
+      <span class="brand-name">IS202 Group 6</span>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#workflow">Workflow</a>
+      <a href="#details">Details</a>
+      <a href="#deployment">Deployment</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-copy">
+      <p class="eyebrow">DevOps deployment lab</p>
+      <h1>Deploying to cloud</h1>
+      <p class="lead">
+        This project demonstrates how a web app can be containerized, published with GitHub Actions,
+        and deployed to a live cloud environment with Render.
+      </p>
+      <div class="cta-row">
+        <a class="primary-btn" href="#deployment">See deployment steps</a>
+        <a class="secondary-btn" href="task_2.html">Open demo login</a>
+      </div>
+      <ul class="status-list" aria-label="Project status">
+        <li><span class="dot green"></span> Docker image built</li>
+        <li><span class="dot blue"></span> GitHub Actions configured</li>
+        <li><span class="dot purple"></span> Ready for Render deployment</li>
+      </ul>
+    </section>
+
+    <aside class="feature-card" id="workflow">
+      <span class="badge">Production checklist</span>
+      <h2>Deployment workflow</h2>
+      <ol>
+        <li>Build the app in Docker</li>
+        <li>Push the image to Docker Hub</li>
+        <li>Trigger the GitHub Actions pipeline</li>
+        <li>Deploy the published image on Render</li>
+        <li>Verify the live application loads correctly</li>
+      </ol>
+    </aside>
+  </main>
+
+  <section class="info-grid" id="details">
+    <article class="info-card">
+      <h3>Dockerized delivery</h3>
+      <p>
+        The container package keeps the application portable and consistent across local development,
+        testing, and production deployment.
+      </p>
+    </article>
+
+    <article class="info-card">
+      <h3>Automation</h3>
+      <p>
+        GitHub Actions automates image build and push workflow steps whenever the main branch is updated.
+      </p>
+    </article>
+
+    <article class="info-card" id="deployment">
+      <h3>Render hosting</h3>
+      <p>
+        Deployment to Render makes the app accessible through a public URL so the project can be tested live.
+      </p>
+    </article>
+  </section>
+</body>
+</html>

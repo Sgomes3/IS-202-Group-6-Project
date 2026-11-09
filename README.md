@@ -16,6 +16,7 @@ This project includes the following tasks:
 - Task 2: Create a login use case diagram to represent the system interactions.
 - Task 3: Create a responsive login prototype page and deploy it using a local Docker container.
 - Task 4: Package the login page in Docker and publish the image with GitHub Actions.
+- Task 5: Deploy the containerized application to Render and verify the live homepage message.
 
 ## Task 4: Docker and GitHub Actions
 
@@ -57,6 +58,18 @@ docker pull <dockerhub-username>/is-202-group-6-project:latest
 - As a team member, I want to run the login demo in a Docker container so the application can be tested consistently.
 - As a team member, I want GitHub Actions to build and publish the image on updates to `main` so the latest project version is available from Docker Hub.
 - As a reviewer, I want documented commands to run the image so I can verify the deployed page locally.
+
+### Task 5: Deploy to Render
+
+The app homepage now includes the required message, "Deploying to cloud", and the Docker image is ready to be published from GitHub Actions. To complete the live cloud deployment, push the updated repository to the `main` branch, confirm the image is uploaded to Docker Hub, and create a Web Service on Render using the published image URL.
+
+```sh
+# Local verification before deployment
+docker build -t is-202-group-6-project .
+docker run --rm -p 8080:80 is-202-group-6-project
+```
+
+Open the site at [http://localhost:8080](http://localhost:8080). The homepage should display the "Deploying to cloud" message and other project information.
 
 Add these stories to the linked GitHub Project board and update their status as the work is reviewed.
 
